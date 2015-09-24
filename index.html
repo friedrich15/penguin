@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport", content="width=device-width, initial-scale=1">
+      <title>PENG PENG PENGUIN</title>
+      <link rel='stylesheet' href='style.css'>
+      <script type="text/javascript" src='jquery.js'></<script>
+
+      </script>
+      <script language="javascript">
+        function showContent(){
+          $('#sub-content').removeClass('hide-sub-content').addClass('show-sub-content');
+        }
+
+        $(window).scroll(function(){
+          showContent();
+        });
+
+        window.onload = function(e){
+          var body = document.body;
+          body.classList.add('background-loaded');
+          var soundcloud = document.getElementById('my-sound');
+          soundcloud.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/224198585%3Fsecret_token%3Ds-CC1dh&amp;color=4aa&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false')
+          // console.log(soundcloud.attr('src'));
+        }
+      </script>
+    </head>
+    <body onclick='showContent()'>
+      <div id='content'>
+        <div id='title-head'>
+          <h1 id='upperhead' class='headline noselect'>PENG PENG</h1>
+          <h1 id='lowerhead' class='headline noselect'>PENGUIN</h1>
+        </div>
+        <div id='sub-content' class='hide-sub-content'>
+          <div id='media-container'>
+            <img class='photo'src='img/test1.jpg'></img>
+            <img class='photo'src='img/test2.jpg'></img>
+            <div id='soundcloud'>
+              <iframe id='my-sound' width="100%" height="166" scrolling="no" frameborder="no"></iframe>
+            </div>
+            <img class='photo'src='img/test2.jpg'></img>
+            <img class='photo'src='img/test1.jpg'></img>
+          </div>
+          <div id='about'>
+            <p><span class='main-p'>PENG PENG PENGUIN</span> lebt in einer fernen Welt und sieht auf Postkarten immer sehr freundlich aus, kann aber bei Nahkontakt enorm scheu oder auch ganz wild werden. <span class='main-p'>PENG PENG PENGUIN</span> springt am liebsten kopfüber ins kalte Wasser.</p>
+          </div>
+          <div id='contact'><a class='headline' href='mailto:contact@pengpengpenguin.net'>CONTACT</a></div>
+          <div id='footer'>
+            <span>copyright 2015 peng peng penguin</span>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
